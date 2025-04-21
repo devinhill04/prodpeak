@@ -546,7 +546,7 @@
                         <span class="search-icon">🔍</span>
                         <input type="text" class="search-input" placeholder="Поиск...">
                     </div>
-                    <button class="btn btn-primary">+ Новая задача</button>
+                    <button class="btn btn-primary" id="new-task-btn">+ Новая задача</button>
                 </div>
             </div>
             
@@ -558,9 +558,9 @@
                     </div>
                     <div class="card-content">
                         <div class="progress-container">
-                            <div>Выполнено 4 из 8 задач</div>
+                            <div id="tasks-progress-text">Выполнено 4 из 8 задач</div>
                             <div style="width: 100%; height: 8px; background-color: #f0f0f0; border-radius: 4px; margin: 10px 0;">
-                                <div style="width: 50%; height: 100%; background-color: var(--primary-color); border-radius: 4px;"></div>
+                                <div id="tasks-progress-bar" style="width: 50%; height: 100%; background-color: var(--primary-color); border-radius: 4px;"></div>
                             </div>
                         </div>
                     </div>
@@ -609,36 +609,13 @@
             
             <div class="tasks-container">
                 <h2>Задачи на сегодня</h2>
-                <ul class="task-list">
-                    <li class="task-item">
-                        <input type="checkbox" class="task-checkbox" checked>
-                        <div class="task-text completed">Позвонить клиенту</div>
-                        <span class="task-category cat-work">Работа</span>
-                        <span class="task-due">10:00</span>
-                    </li>
-                    <li class="task-item">
-                        <input type="checkbox" class="task-checkbox">
-                        <div class="task-text">Подготовить отчет</div>
-                        <span class="task-category cat-work">Работа</span>
-                        <span class="task-due">14:00</span>
-                    </li>
-                    <li class="task-item">
-                        <input type="checkbox" class="task-checkbox" checked>
-                        <div class="task-text completed">Заказать продукты</div>
-                        <span class="task-category cat-shopping">Покупки</span>
-                        <span class="task-due">12:00</span>
-                    </li>
-                    <li class="task-item">
-                        <input type="checkbox" class="task-checkbox">
-                        <div class="task-text">Тренировка</div>
-                        <span class="task-category cat-health">Здоровье</span>
-                        <span class="task-due">18:00</span>
-                    </li>
+                <ul class="task-list" id="task-list">
+                    <!-- Задачи будут добавлены через JavaScript -->
                 </ul>
                 
                 <div class="add-task-container">
-                    <input type="text" class="add-task-input" placeholder="Добавить новую задачу...">
-                    <button class="add-task-btn">Добавить</button>
+                    <input type="text" class="add-task-input" id="add-task-input" placeholder="Добавить новую задачу...">
+                    <button class="add-task-btn" id="add-task-btn">Добавить</button>
                 </div>
             </div>
             
@@ -860,5 +837,7 @@
         </div>
     </div>
     
-<script src="app.js"></script>
-    </body>
+    <!-- Подключаем JavaScript-файл -->
+    <script src="app.js"></script>
+</body>
+</html>
